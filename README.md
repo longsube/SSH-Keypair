@@ -3,6 +3,8 @@
 **MỤC LỤC** 
 được tạo bằng [DocToc](http://doctoc.herokuapp.com/)
 
+
+
 # I. SSH là gì?
 
 SSH là chương trình giúp các thiêt bị có thể xác thực và bảo mật thông tin truyền tải qua nhau. 
@@ -45,19 +47,25 @@ Enter same passphrase again: [press enter]
 Sau khi hoàn thành các bước tạo key, ta sẽ có 2 khóa được tạo ra (VD; id_rsa và id_rsa.pub), ta chuyển khóa .pub sang máy remote	
 	[user_name@local_host ~]$ scp /home/user_name/.ssh/id_rsa.pub remote_host:/home/user_name/
 	
-## 6. Ta đưa khóa public vào file authorized_keys trong thư mục /home/user_name/.ssh trên máy remote, nếu chưa có ta tạo ra file này
+## 6. Authorized_keys 
+Ta đưa khóa public vào file authorized_keys trong thư mục /home/user_name/.ssh trên máy remote, nếu chưa có ta tạo ra file này
 	[user_name@remote_host user_name]$ cat /home/username/id_rsa.pub >> /home/username/.ssh/authorized_keys
-	
-## 7. Thêm hostname của máy client vào file authorized_keys trên máy remote	
+Thêm hostname của máy client vào file authorized_keys trên máy remote	
 	from="local_host" ssh-rsa AAAAB3NzaC1y ... gwWhN/sYw== user_name@local_host 
 	
-## 8. Phân quyền cho .ssh và authorized_keys trên máy remote
+## 7. Phân quyền 
+Phân quyền cho .ssh và authorized_keys trên máy remote
 	[user_name@remote_host user_name]$chmod 700 /home/user_name/.ssh
 	[user_name@remote_host user_name]$chmod 644 /home/user_name/.ssh/authorized_keys
 
-## 9. Khởi chạy ssh-agent trên máy client
+## 8. Khởi chạy 
+Khởi chạy ssh-agent trên máy client
 	eval "$(ssh-agent -s)"
 	ssh-add /home/user_name/.ssh/id_rsa
+	
+## 9. Kết nối
+Tiến hành SSH tới máy remote sẽ không yêu cầu password
+	[user_name@local_host ~]$ssh user_name@local_host
 
 
 
