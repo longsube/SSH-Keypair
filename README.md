@@ -3,6 +3,20 @@
 **MỤC LỤC** 
 được tạo bằng [DocToc](http://doctoc.herokuapp.com/)
 
+- [Xác thực SSH bằng Keypair](#user-content-x%C3%A1c-th%E1%BB%B1c-ssh-b%E1%BA%B1ng-keypair)
+- [I. SSH là gì?](#user-content-i-ssh-l%C3%A0-g%C3%AC)
+- [II. Các phương thức xác thực bằng SSH](#user-content-ii-c%C3%A1c-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-x%C3%A1c-th%E1%BB%B1c-b%E1%BA%B1ng-ssh)
+- [III. Các thuật toán để tạo khóa trong SSH](#user-content-iii-c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-%C4%91%E1%BB%83-t%E1%BA%A1o-kh%C3%B3a-trong-ssh)
+- [IV. Cách cấu hình một cặp khóa bất đối xứng trong Linux](#user-content-iv-c%C3%A1ch-c%E1%BA%A5u-h%C3%ACnh-m%E1%BB%99t-c%E1%BA%B7p-kh%C3%B3a-b%E1%BA%A5t-%C4%91%E1%BB%91i-x%E1%BB%A9ng-trong-linux)
+	- [1. Chuẩn bị:](#user-content-1-chu%E1%BA%A9n-b%E1%BB%8B)
+	- [2. Tạo cặp khóa bất đối xứng trên máy client:](#user-content-2-t%E1%BA%A1o-c%E1%BA%B7p-kh%C3%B3a-b%E1%BA%A5t-%C4%91%E1%BB%91i-x%E1%BB%A9ng-tr%C3%AAn-m%C3%A1y-client)
+	- [3. Nhập đường dẫn lưu key:](#user-content-3-nh%E1%BA%ADp-%C4%91%C6%B0%E1%BB%9Dng-d%E1%BA%ABn-l%C6%B0u-key)
+	- [4. Tạo passphrase cho private key:](#user-content-4-t%E1%BA%A1o-passphrase-cho-private-key)
+	- [5. Đẩy public key qua máy remote](#user-content-5-%C4%90%E1%BA%A9y-public-key-qua-m%C3%A1y-remote)
+	- [6. Authorized_keys](#user-content-6-authorized_keys)
+	- [7. Phân quyền](#user-content-7-ph%C3%A2n-quy%E1%BB%81n)
+	- [8. Khởi chạy](#user-content-8-kh%E1%BB%9Fi-ch%E1%BA%A1y)
+	- [9. Kết nối](#user-content-9-k%E1%BA%BFt-n%E1%BB%91i)
 
 
 # I. SSH là gì?
