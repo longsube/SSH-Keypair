@@ -43,7 +43,8 @@ Ta có 2 máy là client machine và remote machine
 ```sh
 [user_name@local_host ~]$
 [user_name@remote_host user_name]$
-	
+```sh
+
 ## 2. Tạo cặp khóa bất đối xứng trên máy client:
 	[user_name@local_host ~]$ ssh-keygen -t rsa -b 2048
 - -t: lựa chọn sử dụng khóa rsa1, rsa2 hoặc dsa
