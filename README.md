@@ -40,8 +40,9 @@ Rivest-Shamir-Adleman (RSA) là thuật toán mã hóa bất đối xứng đư�
 
 ## 1. Chuẩn bị:
 Ta có 2 máy là client machine và remote machine
-	[user_name@local_host ~]$
-	[user_name@remote_host user_name]$
+```sh
+[user_name@local_host ~]$
+[user_name@remote_host user_name]$
 	
 ## 2. Tạo cặp khóa bất đối xứng trên máy client:
 	[user_name@local_host ~]$ ssh-keygen -t rsa -b 2048
