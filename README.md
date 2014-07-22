@@ -37,9 +37,10 @@ Ta có 2 máy là client machine và remote machine
 	
 ## 4. Tạo passphrase cho private key:
 Passphrase này để bảo vệ private key của người dùng trong trường hợp bị lộ
-	Enter passphrase (empty for no passphrase): [press enter]
-	Enter same passphrase again: [press enter]
-
+```sh	
+Enter passphrase (empty for no passphrase): [press enter]
+Enter same passphrase again: [press enter]
+```
 ## 5. Đẩy public key qua máy remote
 Sau khi hoàn thành các bước tạo key, ta sẽ có 2 khóa được tạo ra (VD; id_rsa và id_rsa.pub), ta chuyển khóa .pub sang máy remote	
 	[user_name@local_host ~]$ scp /home/user_name/.ssh/id_rsa.pub remote_host:/home/user_name/
