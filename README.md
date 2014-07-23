@@ -90,13 +90,18 @@ Phân quyền cho .ssh và authorized_keys trên máy remote
 Khởi chạy ssh-agent trên máy client
 ```sh
 eval "$(ssh-agent -s)"
+```
+
+Ở bước này sẽ yêu cầu nhập passphrase cho private key đã cấu hình ở trên
+
+```sh
 ssh-add /home/user_name/.ssh/id_rsa
 ```
 	
 ## 9. Kết nối
 Tiến hành SSH tới máy remote sẽ không yêu cầu password
 ```sh
-[user_name@local_host ~]$ssh user_name@local_host
+[user_name@local_host ~]$ssh user_name@remote_host
 ```
 
 
